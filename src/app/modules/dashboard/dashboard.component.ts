@@ -5,30 +5,30 @@ import { MatTableDataSource, MatPaginator } from '@angular/material';
 export interface PeriodicElement {
   name: string;
   position: number;
-  weight: number;
-  symbol: string;
+  phone: number;
+  email: string;
 }
 const ELEMENT_DATA: PeriodicElement[] = [
-  { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-  { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-  { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-  { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-  { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-  { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-  { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-  { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-  { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-  { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-  { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
-  { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
-  { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
-  { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
-  { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
-  { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
-  { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
-  { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
-  { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
-  { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+  { position: 1, name: 'Nguyễn Văn A', phone: 123456789, email: 'example@email.com' },
+  { position: 2, name: 'Nguyễn Văn B', phone: 123456789, email: 'example@email.com' },
+  { position: 3, name: 'Nguyễn Văn C', phone: 123456789, email: 'example@email.com' },
+  { position: 4, name: 'Nguyễn Văn D', phone: 123456789, email: 'example@email.com' },
+  { position: 5, name: 'Nguyễn Văn E', phone: 123456789, email: 'example@email.com' },
+  { position: 6, name: 'Nguyễn Văn F', phone: 123456789, email: 'example@email.com' },
+  { position: 7, name: 'Nguyễn Văn A', phone: 123456789, email: 'example@email.com' },
+  { position: 8, name: 'Nguyễn Văn G', phone: 123456789, email: 'example@email.com' },
+  { position: 9, name: 'Nguyễn Văn H', phone: 123456789, email: 'example@email.com' },
+  { position: 10, name: 'Nguyễn Văn K', phone: 123456789, email: 'example@email.com' },
+  { position: 11, name: 'Nguyễn Văn Z', phone: 123456789, email: 'example@email.com' },
+  { position: 12, name: 'Nguyễn Văn X', phone: 123456789, email: 'example@email.com' },
+  { position: 13, name: 'Nguyễn Văn C', phone: 123456789, email: 'example@email.com' },
+  { position: 14, name: 'Nguyễn Văn V', phone: 123456789, email: 'example@email.com' },
+  { position: 15, name: 'Nguyễn Văn N', phone: 123456789, email: 'example@email.com' },
+  { position: 16, name: 'Nguyễn Văn M', phone: 123456789, email: 'example@email.com' },
+  { position: 17, name: 'Nguyễn Văn O', phone: 123456789, email: 'example@email.com' },
+  { position: 18, name: 'Nguyễn Văn P', phone: 123456789, email: 'example@email.com' },
+  { position: 19, name: 'Nguyễn Văn Q', phone: 123456789, email: 'example@email.com' },
+  { position: 20, name: 'Nguyễn Văn R', phone: 123456789, email: 'example@email.com' },
 ];
 
 @Component({
@@ -42,7 +42,7 @@ export class DashboardComponent implements OnInit {
   cards = [];
   pieChart = [];
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['position', 'name', 'phone', 'email'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
